@@ -1,11 +1,11 @@
 
-SceneEDNet 
+# SceneEDNet 
 ==================
 
 Implementation of ICARCV 2018 version of [SceneEDNet](https://arxiv.org/abs/1807.03464).
 
 
-Citation
+## Citation
 ====================
 
 The code is avaialbale for research purpose. If you are using the code in your research work, please cite the following paper.
