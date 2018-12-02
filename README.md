@@ -1,7 +1,7 @@
 # SceneEDNet
 Implementation of ICARCV 2018 version of SceneEDNet.
 
-# Citation
+## Citation
 If you are using the code in your research work, please cite the following paper.
 
 '''
