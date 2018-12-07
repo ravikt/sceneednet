@@ -11,14 +11,17 @@ from keras import optimizers
 from keras import losses
 
 # Use the saved model 
-model = load_model('sceneflow.h5')
+model = load_model('trained_model.h5')
 adam = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
 model.compile(loss=losses.mean_squared_error, optimizer=adam, metrics=['accuracy'])
 
 # read set of stereo images at t and t+1
 # total five sets from each folder
 
-predict_path = "path to ground truth images, disparity and optical flow"
+# dataset folder containing images with its 
+# corresponding optical flow and disparity
+predict_path = "data" 
+
 input_images, ground_truth = dataRead().readInput(predict_path)
 output = model.predict(input_images)
 
