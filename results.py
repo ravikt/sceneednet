@@ -6,9 +6,12 @@ import keras
 import matplotlib.pyplot as plt
 
 from keras.models import load_model
-from readfiles  import dataRead
+
 from keras import optimizers
 from keras import losses
+
+from readfiles import DataRead
+from sceneflow import SceneFlow
 
 # Use the saved model 
 model = load_model('trained_model.h5')
@@ -20,7 +23,7 @@ model = load_model('trained_model.h5')
 # corresponding optical flow and disparity
 predict_path = "data" 
 
-input_images, ground_truth = dataRead().readInput(predict_path)
+input_images, ground_truth = DataRead().readInput(predict_path)
 output = model.predict(input_images)
 
 # extracting optical flow and depth maps from output

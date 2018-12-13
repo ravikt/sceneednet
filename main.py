@@ -21,8 +21,8 @@ from keras.callbacks import ModelCheckpoint
 from keras.callbacks import History
 
 from sceneedclass import DataGenerator
-from readfiles import dataRead
-from sceneflow import sceneFlow
+from readfiles import DataRead
+from sceneflow import SceneFlow
 
 train_path = "training set path"
 val_path = "validation set path"
@@ -108,7 +108,7 @@ adam = optimizers.Adam(lr=learning_rate, beta_1=0.9, beta_2=0.999,
        epsilon=None, decay=lrdecay, amsgrad=False)
 
 # Configure the model for training
-parallel_model.compile(optimizer=adam, loss=sceneFlow().epeloss, metrics=['accuracy'])
+parallel_model.compile(optimizer=adam, loss=SceneFlow().epeloss, metrics=['accuracy'])
 
 
 # Saves the model after every epoch

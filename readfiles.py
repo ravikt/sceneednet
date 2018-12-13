@@ -6,7 +6,7 @@ import numpy.matlib
 import sys
 import matplotlib.pyplot as plt
 
-class dataRead():
+class DataRead():
 
     def readInput(self, path):
            
@@ -15,7 +15,7 @@ class dataRead():
         focal_length = 1050.0
         baseline = 1.0
 
-        for x in range(6, 14):
+        for x in range(6, 8):
             if x < 9:
                 im_path1 = "000%d.png" % (x)
                 im_path2 = "000%d.png" % (x+1)
@@ -37,19 +37,19 @@ class dataRead():
                 disp_path1 = "000%d.pfm"%(x)
                 disp_path2 = "00%d.pfm"%(x+1)  
                
-            imgL1 = cv2.imread(os.path.join(path, "images/left", im_path1))
-            imgR1 = cv2.imread(os.path.join(path, "images/right",im_path2)) # stereo pair at t
-            imgL2 = cv2.imread(os.path.join(path, "images/left", im_path1))
-            imgR2 = cv2.imread(os.path.join(path, "images/right", im_path2)) # stereo pair at t+1
+            imgL1 = cv2.imread(os.path.join(path, "images/Driving/left", im_path1))
+            imgR1 = cv2.imread(os.path.join(path, "images/Driving/right",im_path2)) # stereo pair at t
+            imgL2 = cv2.imread(os.path.join(path, "images/Driving/left", im_path1))
+            imgR2 = cv2.imread(os.path.join(path, "images/Driving/right", im_path2)) # stereo pair at t+1
  
             images = np.concatenate((imgL1, imgR1, imgL2, imgR2), axis = 2)
             
             data.append(images)
             # Ground truth optical flow and disparity
 
-            of = dataRead().readPFM(os.path.join(path,"optical_flow/into_future/left", of_path))
-            disp1 = dataRead().readPFM(os.path.join(path,"disparity/left", disp_path1))
-            disp2 = dataRead().readPFM(os.path.join(path,"disparity/left", disp_path2))
+            of = DataRead().readPFM(os.path.join(path,"optical_flow/Driving/left", of_path))
+            disp1 = DataRead().readPFM(os.path.join(path,"disparity/Driving/left", disp_path1))
+            disp2 = DataRead().readPFM(os.path.join(path,"disparity/Driving/left", disp_path2))
             
             #depth1 = (focal_length*baseline)/disp1
             #depth2 = (focal_length*baseline)/disp2 

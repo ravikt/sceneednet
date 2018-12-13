@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import keras
 from keras import backend as K 
 
-class sceneFlow():
+class SceneFlow():
 
     def sceneflowconstruct(self,of, dt0, dt1):
 

@@ -3,10 +3,10 @@ import cv2
 import os
 import re
 
-from readfiles import dataRead
+from readfiles import DataRead
 #from sceneflow import SceneFlow
 
-class dataGenerator():
+class DataGenerator():
 
   def __data_generation(self, path, folder_number):
 
