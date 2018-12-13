@@ -55,6 +55,9 @@ class SceneFlow():
         return scene_flow
 
     # End point error loss function
+    # Calculates EPE on Scene Flow vector of size MxNx3
+    # Loss is the euclidean distance between ground truth 
+    # prediction. 
     def epeloss(self, y_true, y_pred):
         x = y_true[:,:,1] - y_pred[:,:,1]
         y = y_true[:,:,2] - y_pred[:,:,2]
