@@ -80,7 +80,7 @@ def sceneednet():
     conv9 = LeakyReLU()(conv9)
     output = Conv2D(3, (3, 3), name = 'output', strides = 1, padding='same')(conv9)
     #outimage = LeakyReLU()(outimage)
-    model = Model(inputs=input, outputs=output)
+    model = Model(inputs=inimage, outputs=output)
     
     model.summary()
  

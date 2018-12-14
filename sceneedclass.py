@@ -64,11 +64,11 @@ class DataGenerator():
             #print y, x
             xtrain.append(input_data)
             
-            of = dataRead().readPFM(os.path.join(of_dir, path, folder_path, "into_future", "left", of_path))
-            disp1 = dataRead().readPFM(os.path.join(d_dir, path, folder_path, "left", disp_path1))
-            disp2 = dataRead().readPFM(os.path.join(d_dir, path, folder_path, "left", disp_path2))
+            of = DataRead().readPFM(os.path.join(of_dir, path, folder_path, "into_future", "left", of_path))
+            disp1 = DataRead().readPFM(os.path.join(d_dir, path, folder_path, "left", disp_path1))
+            disp2 = DataRead().readPFM(os.path.join(d_dir, path, folder_path, "left", disp_path2))
             
-            target = dataRead().sceneflowconstruct(of, disp1, disp2)
+            target = DataRead().sceneflowconstruct(of, disp1, disp2)
             #depth1 = (focal_length*baseline)/disp1
             #depth2 = (focal_length*baseline)/disp2 
             
