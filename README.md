@@ -2,7 +2,7 @@
 # SceneEDNet 
 ==================
 
-Implementation of ICARCV 2018 version of [SceneEDNet](https://arxiv.org/abs/1807.03464).
+Implementation of ICARCV 2018 version of [SceneEDNet](https://ieeexplore.ieee.org/abstract/document/8581172).
 
 
 # Dependencies
@@ -18,9 +18,11 @@ OpenCV
 
 The code is available for research purpose. If you are using the code in your research work, please cite the following paper.
 
-    @article{thakur2018sceneednet,
-     title={SceneEDNet: A Deep Learning Approach for Scene Flow Estimation},
-     author={Thakur, Ravi Kumar and Mukherjee, Snehasis},
-     journal={arXiv preprint arXiv:1807.03464},
-     year={2018}
+    @inproceedings{thakur2018sceneednet,
+    title={SceneEDNet: A Deep Learning Approach for Scene Flow Estimation},
+    author={Thakur, Ravi Kumar and Mukherjee, Snehasis},
+    booktitle={2018 15th International Conference on Control, Automation, Robotics and Vision (ICARCV)},
+    pages={394--399},
+    year={2018},
+    organization={IEEE}
     }
