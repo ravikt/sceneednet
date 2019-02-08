@@ -48,7 +48,7 @@ for i in range(3):
     plt.imshow(predFlow)
     # predFilename = "SF%dpr" % i
     # plt.title(predFilename, fontsize=16)
-    plt.savefig('sf'+str(i)+'pr.png', bbox_inches='tight')
+    plt.savefig('sf'+str(i)+'pr.png', transparent=True, bbox_inches='tight')
     plt.clf()
 
     plt.figure(figsize=[8,6])
@@ -57,7 +57,7 @@ for i in range(3):
     plt.imshow(gtFlow)
     #gtFilename = "SF%dgt" % i
     # plt.title(gtFilename, fontsize=16)
-    plt.savefig('sf'+str(i)+'gt.png', bbox_inches='tight') 
+    plt.savefig('sf'+str(i)+'gt.png', transparent=True, bbox_inches='tight') 
     plt.clf()
 
 
