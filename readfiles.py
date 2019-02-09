@@ -38,8 +38,8 @@ class DataRead():
                 disp_path2 = "00%d.pfm"%(x+1)  
                
             imgL1 = cv2.imread(os.path.join(path, "images/Driving/left", im_path1))
-            imgR1 = cv2.imread(os.path.join(path, "images/Driving/right",im_path2)) # stereo pair at t
-            imgL2 = cv2.imread(os.path.join(path, "images/Driving/left", im_path1))
+            imgR1 = cv2.imread(os.path.join(path, "images/Driving/right",im_path1)) # stereo pair at t
+            imgL2 = cv2.imread(os.path.join(path, "images/Driving/left", im_path2))
             imgR2 = cv2.imread(os.path.join(path, "images/Driving/right", im_path2)) # stereo pair at t+1
  
             images = np.concatenate((imgL1, imgR1, imgL2, imgR2), axis = 2)
