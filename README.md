@@ -5,7 +5,7 @@
 Implementation of ICARCV 2018 version of [SceneEDNet](https://ieeexplore.ieee.org/abstract/document/8581172).
 
 
-# Dependencies
+## Dependencies
 ====================
 
 Keras >= 2.1.4 
@@ -13,7 +13,7 @@ Keras >= 2.1.4
 OpenCV
 
 
-# Citation
+## Citation
 ====================
 
 The code is available for research purpose. If you are using the code in your research work, please cite the following paper.
